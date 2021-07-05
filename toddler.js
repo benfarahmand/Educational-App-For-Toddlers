@@ -52,6 +52,12 @@ function mouseReleased(){
 	whileDragging = false;
 }
 
+function mouseWheel(event){
+	for(var i = 0 ; i < buttons.length ; i++){
+		buttons[i].y=buttons[i].y+event.delta;
+	}
+}
+
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
   positionButtons();
